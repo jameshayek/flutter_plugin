@@ -1,48 +1,37 @@
-/*group 'com.speedchecker.speed_checker_plugin'
-version '1.0'
 
-// Commented out due to gradle conflicts between our app and the speed test library
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
-    }
-}
+// filepath: /c:/Users/James/Programming/Flutter/FirstFlutterApp/frequency_details_app/frequency_details_app/flutter_plugin/android/build.gradle
 
-rootProject.allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven {
-            url 'https://maven.speedcheckerapi.com/artifactory/libs-release'
-            credentials {
-                username = "speedchecker"
-                password = "AP3Zg8iFoiatscExgkeMHP3ur9EcsNkbxC8e6gXr8QV9PeWtiAVM3pETm8pF"
-            }
-        }
-    }
-}*/
+// Remove or comment out the old group/version/buildscript/rootProject blocks entirely.
+// Keep only the code below:
 
 apply plugin: 'com.android.library'
 
 android {
-    // Namespace is now explicitly declared
     namespace "com.speedchecker.plugin"
     compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 21
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+}
 
-    defaultConfig {
-        minSdkVersion 21
+// Keep your repository credentials here:
+repositories {
+    google()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    maven {
+        url 'https://maven.speedcheckerapi.com/artifactory/libs-release'
+        credentials {
+            username = "speedchecker"
+            password = "AP3Zg8iFoiatscExgkeMHP3ur9EcsNkbxC8e6gXr8QV9PeWtiAVM3pETm8pF"
+        }
     }
-    
 }
 
 dependencies {
