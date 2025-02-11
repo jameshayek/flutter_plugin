@@ -1,6 +1,7 @@
-group 'com.speedchecker.speed_checker_plugin'
+/*group 'com.speedchecker.speed_checker_plugin'
 version '1.0'
 
+// Commented out due to gradle conflicts between our app and the speed test library
 buildscript {
     repositories {
         google()
@@ -9,7 +10,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.0'
     }
-}
+}*/
 
 rootProject.allprojects {
     repositories {
