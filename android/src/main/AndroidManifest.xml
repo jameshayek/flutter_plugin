@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.speedchecker.speed_checker_plugin">
+  package="com.speedchecker.plugin">
 
 	<uses-permission android:name="android.permission.INTERNET"/>
 
